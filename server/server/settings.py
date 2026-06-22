@@ -19,7 +19,7 @@ if _env_path.exists():
 # Basic
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'please-change-me')
 DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(',') if os.getenv('DJANGO_ALLOWED_HOSTS') else []
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(',') if os.getenv('DJANGO_ALLOWED_HOSTS') else ['*']
 
 # Applications
 INSTALLED_APPS = [
@@ -42,6 +42,16 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.roles',
     'apps.audit',
+    'apps.academics',
+    'apps.courses',
+    'apps.students',
+    'apps.grading',
+    'apps.results',
+    'apps.approvals',
+    'apps.complaints',
+    'apps.notifications',
+    'apps.reports',
+    'apps.transcripts',
     'api',
 ]
 
